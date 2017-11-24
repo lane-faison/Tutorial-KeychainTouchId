@@ -17,6 +17,7 @@
 		2A94F6E619FE7D31007CED2D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94F6E519FE7D31007CED2D /* Note.swift */; };
 		2AC21FA11A005A88003FD06F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC21FA01A005A88003FD06F /* LoginViewController.swift */; };
 		F60F7C1E1FC8B09900073506 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F7C1D1FC8B09900073506 /* KeychainPasswordItem.swift */; };
+		F60F7C201FC8C13C00073506 /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F7C1F1FC8C13C00073506 /* TouchIDAuthentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2A94F6E519FE7D31007CED2D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		2AC21FA01A005A88003FD06F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F60F7C1D1FC8B09900073506 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainPasswordItem.swift; path = Resources/KeychainPasswordItem.swift; sourceTree = SOURCE_ROOT; };
+		F60F7C1F1FC8C13C00073506 /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				2A94F6E519FE7D31007CED2D /* Note.swift */,
 				2AC21FA01A005A88003FD06F /* LoginViewController.swift */,
 				F60F7C1D1FC8B09900073506 /* KeychainPasswordItem.swift */,
+				F60F7C1F1FC8C13C00073506 /* TouchIDAuthentication.swift */,
 				2A2CDC9F19FB441200BDF4E3 /* Main.storyboard */,
 				2A2CDCA219FB441200BDF4E3 /* Images.xcassets */,
 				2A2CDCA419FB441200BDF4E3 /* LaunchScreen.xib */,
@@ -166,6 +169,7 @@
 				F60F7C1E1FC8B09900073506 /* KeychainPasswordItem.swift in Sources */,
 				2A2CDC9719FB441200BDF4E3 /* AppDelegate.swift in Sources */,
 				2A2CDC9C19FB441200BDF4E3 /* MasterViewController.swift in Sources */,
+				F60F7C201FC8C13C00073506 /* TouchIDAuthentication.swift in Sources */,
 				2A2CDC9E19FB441200BDF4E3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

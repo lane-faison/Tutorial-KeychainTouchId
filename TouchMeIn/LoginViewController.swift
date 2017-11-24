@@ -34,12 +34,14 @@ class LoginViewController: UIViewController {
     var passwordItems: [KeychainPasswordItem] = []
     let createLoginButtonTag = 0
     let loginButtonTag = 1
+    let touchMe = TouchIDAuth()
     
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var createInfoLabel: UILabel!
+    @IBOutlet weak var touchIDButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,8 @@ class LoginViewController: UIViewController {
         if let storedUsername = UserDefaults.standard.value(forKey: "username") as? String {
             usernameTextField.text = storedUsername
         }
+        
+        touchIDButton.isHidden = !touchMe.canEvaluatePolicy()
     }
     
     // MARK: - Action for checking username/password
@@ -103,6 +107,20 @@ class LoginViewController: UIViewController {
                 let okAction = UIAlertAction(title: "Foiled Again!", style: .default)
                 alertView.addAction(okAction)
                 present(alertView, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func touchIDLoginAction(_ sender: UIButton) {
+        touchMe.authenticateUser() { message in
+            if let message = message {
+                let alertView = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Darn!", style: .default)
+                alertView.addAction(okAction)
+                self.present(alertView, animated: true, completion: nil)
+            } else {
+                self.performSegue(withIdentifier: "dismissLogin", sender: self)
+
             }
         }
     }
